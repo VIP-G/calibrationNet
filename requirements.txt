@@ -1,0 +1,12 @@
+pandas
+h5py
+matplotlib
+scipy
+pyquaternion
+opencv-python==4.7.0.72
+pykitti
+numpy
+open3d-python==0.3.0.0
+Pillow
+scikit-image
+sacred==0.7.4

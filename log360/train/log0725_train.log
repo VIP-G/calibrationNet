@@ -1,0 +1,81 @@
+nohup: ignoring input
+idx:type:type20 -- 20
+args.output: checkpointskitti/r20_t1-5
+---------------------------------
+Parameter Count: 8683367
+This kitti-odometry dataset!
+max_t 1.5 20.0
+sep=== 03
+ZGHZall_files 0
+sep=== 04
+ZGHZall_files 4000
+Number of the train Dataset: 4000
+Number of the train DataLoader: 160
+This kitti-odometry dataset!
+max_t 1.5 20.0
+sep=== 03
+ZGHZall_files 1031
+sep=== 04
+ZGHZall_files 1031
+VAL SET: Using this file: /data_home/home/zhangguanghui/kitti360/kitti_360_val_RT_left_seq03_20.00_1.50.csv
+Number of the val Dataset: 1031
+Number of the val DataLoader: 42
+This is 0-th epoch
+/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/conv.py:456: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return F.conv2d(input, weight, bias, self.stride,
+Init worker 0 with seed 1321612446
+Traceback (most recent call last):
+  File "/home/zhangguanghui/Code/ZghNet/train_kitti360.py", line 307, in <module>
+    train(args)
+  File "/home/zhangguanghui/Code/ZghNet/train_kitti360.py", line 126, in train
+    T_predicted, R_predicted = model(rgb_input, lidar_input)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/parallel/data_parallel.py", line 185, in forward
+    outputs = self.parallel_apply(replicas, inputs, module_kwargs)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/parallel/data_parallel.py", line 200, in parallel_apply
+    return parallel_apply(replicas, inputs, kwargs, self.device_ids[:len(replicas)])
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/parallel/parallel_apply.py", line 108, in parallel_apply
+    output.reraise()
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/_utils.py", line 705, in reraise
+    raise exception
+torch.cuda.OutOfMemoryError: Caught OutOfMemoryError in replica 1 on device 1.
+Original Traceback (most recent call last):
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/parallel/parallel_apply.py", line 83, in _worker
+    output = module(*input, **kwargs)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/zhangguanghui/Code/ZghNet/models/ZghNet.py", line 131, in forward
+    fmap1 = self.f_rgb(rgb_img)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/zhangguanghui/Code/ZghNet/models/extractor.py", line 223, in forward
+    x = self.layer1(x)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/zhangguanghui/Code/ZghNet/models/extractor.py", line 58, in forward
+    y = self.relu(self.norm1(self.conv1(y)))
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/zhangguanghui/anaconda3/envs/HliuNet3_10/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 48.00 MiB. GPU  has a total capacity of 23.69 GiB of which 32.75 MiB is free. Process 1199916 has 22.76 GiB memory in use. Including non-PyTorch memory, this process has 914.00 MiB memory in use. Of the allocated memory 439.26 MiB is allocated by PyTorch, and 30.74 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
